@@ -24,14 +24,14 @@ return {
 					return nil
 				else
 					return {
-						timeout_ms = 500,
+						timeout_ms = 1500,
 						lsp_format = "fallback",
 					}
 				end
 			end,
 			formatters_by_ft = {
-				lua = { "stylua" },
-				go = {"goimports", "gofumpt", lsp_format = "fallback"},
+				go = { "goimports", "gofumpt", lsp_format = "fallback" },
+				json = { "jq" },
 			},
 		},
 	}
