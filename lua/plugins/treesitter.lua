@@ -1,35 +1,16 @@
 return {
-	{
-		"nvim-treesitter/nvim-treesitter",
-		dependencies = { "OXY2DEV/markview.nvim" },
-		lazy = false,
-		build = ":TSUpdate",
-		config = function()
-			local configs = require("nvim-treesitter.config")
-
-			configs.setup({
-				ensure_installed = {
-					"lua",
-					"bash",
-					"dockerfile",
-					"go",
-					"gomod",
-					"gosum",
-					"gotmpl",
-					"gowork",
-					"json",
-					"yaml",
-					"make",
-					"sql",
-					"hcl",
-					"markdown",
-					"markdown_inline"
-				},
-				auto_install = false,
-				sync_install = false,
-				highlight = { enable = true },
-				indent = { enable = true },
-			})
-		end
-	}
+  'nvim-treesitter/nvim-treesitter',
+  enabled = false,
+  branch = 'master',
+  lazy = false,
+  build = ':TSUpdate',
+  config = function()
+    require('nvim-treesitter.configs').setup({
+      ensure_installed = { 'bash', 'go', 'javascript', 'typescript', 'sql', 'dockerfile', 'json', 'yaml', 'hcl' },
+      sync_install = false,
+      auto_install = false,
+      highlight = { enable = true },
+      indent = { enable = true }
+    })
+  end
 }

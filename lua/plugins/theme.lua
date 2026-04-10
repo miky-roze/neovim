@@ -1,8 +1,11 @@
 return {
-	{
-		"thesimonho/kanagawa-paper.nvim",
-		config = function()
-			vim.cmd.colorscheme("kanagawa-paper-ink")
-		end
-	}
+  "rose-pine/neovim",
+  enabled = false,
+  name = "rose-pine",
+  lazy = false,
+  priority = 1000,
+  config = function()
+    vim.cmd("colorscheme rose-pine-main")
+  end,
 }
+
