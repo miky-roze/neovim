@@ -21,8 +21,8 @@ return {
     local actions = require("telescope.actions")
     vim.keymap.set('n', '<leader>qf',
       function()
-	local bufnr = vim.api.nvim_get_current_buf()
-	actions.smart_send_to_qflist(bufnr)
+        local bufnr = vim.api.nvim_get_current_buf()
+        actions.smart_send_to_qflist(bufnr)
       end
     )
   end
